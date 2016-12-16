@@ -1,0 +1,11 @@
+
+/**
+ * 
+ * @author G00313177
+ *
+ */
+import java.util.jar.JarInputStream;
+import java.util.jar.JarEntryl;
+public class JarReader {
+
+}
