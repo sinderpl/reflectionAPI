@@ -1,0 +1,13 @@
+package ie.gmit.sw;
+
+/**
+ * 
+ * @author G00313177
+ *
+ *A runner for the reflection API
+ */
+public class ReflectionRunner {
+	public static void main(String[] args) {
+		//ReflectionExample example = new ReflectionExample("string-service.jar")
+	}
+}

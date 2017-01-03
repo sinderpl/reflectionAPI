@@ -1,0 +1,17 @@
+package ie.gmit.sw;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+/**
+ * 
+ * @author G00313177
+ *
+ *A runner for the reflection API
+ */
+public class ReflectionRunner {
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+		JarReader reader  = new JarReader();
+		reader.getJar("string-service.jar");
+	}
+}
