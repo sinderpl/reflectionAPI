@@ -1,0 +1,34 @@
+package ie.gmit.sw;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.HashMap;
+
+/**
+ * 
+ * @author G00313177
+ *
+ *A runner for the reflection API
+ */
+public class ReflectionRunner {
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+		JarReader reader  = new JarReader();
+		reader.getJar("/home/pancakemutiny/Desktop/string-service.jar");
+		
+		HashMap jarContents = reader.getJarContents();
+		if (jarContents.isEmpty()) {
+            System.out.println("Please specify a class name.");
+            System.exit(1);
+        }
+        try {
+            Class queryClass = Class.forName("ie.gmit.sw.Resultator");
+            new ReflectionExample(queryClass);
+        } catch (ClassNotFoundException ee) {	
+            System.out.println("Couldn't find class '" + "'");
+            System.exit(1);
+        }
+        
+		//ReflectionExample example = new ReflectionExample();
+		
+	}
+}
