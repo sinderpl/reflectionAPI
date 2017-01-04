@@ -12,10 +12,11 @@ import java.util.HashMap;
  */
 public class ReflectionRunner {
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
-		
-		//Initialise the JarReader instance
 		JarReader reader  = new JarReader();
-
+		Metric met = new Metric();
+		met.setOutCounter(2);
+		met.setInCounter(3);
+		System.out.println(met.getStability());
 		//reader.getJar("/home/pancakemutiny/Desktop/string-service.jar");
 		
 		

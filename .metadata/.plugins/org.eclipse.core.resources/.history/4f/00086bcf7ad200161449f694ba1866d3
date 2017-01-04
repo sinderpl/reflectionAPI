@@ -1,0 +1,29 @@
+package ie.gmit.sw;
+
+/**
+ * 
+ * @author G00313177
+ * 
+ * 
+ * A Metric class that encapsulates the data needed to calculate the stability of a given class
+ * 
+ * @param inCounter Numerical measure of classes pointing a the class this metric represents
+ * @param outCounter Numerical measure of classes the class represented by this metric points at
+ * @param className The name of the class represented by this metric
+ */
+public class Metric {
+	private int inCounter;
+	private int outCounter;
+	private String className;
+	/**
+	 * Returns the stability of the current object class as a float value
+	 * 
+	 * @return Float value for the stability
+	 */
+	public float getStability(){
+		float stability = 0.1f;
+		stability = inCounter/(inCounter + outCounter);
+		return stability;
+	}
+
+}

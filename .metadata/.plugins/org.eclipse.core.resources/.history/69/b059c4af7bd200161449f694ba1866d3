@@ -15,7 +15,10 @@ public class ReflectionRunner {
 		
 		//Initialise the JarReader instance
 		JarReader reader  = new JarReader();
-
+		Metric met = new Metric();
+		met.setOutCounter(5);
+		met.setInCounter(31);
+		System.out.println(met.getStability());
 		//reader.getJar("/home/pancakemutiny/Desktop/string-service.jar");
 		
 		

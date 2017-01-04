@@ -13,30 +13,6 @@ package ie.gmit.sw;
  */
 public class Metric {
 	
-	private int inCounter;
-	private int outCounter;
-	private String className;
-	/**
-	 * Returns the stability of the current object class as a float value
-	 * 
-	 * @return Float value for the stability
-	 */
-	public float getStability(){
-		//Local return variable to represent the stability as a float value
-		float stability = 1f;
-		
-		//Make sure outCounter is not zero to avoid division by 0,
-		//inCounter does not need to be checked at this point
-		if (outCounter > 0){
-			stability = (float) inCounter/(inCounter + outCounter);
-		}
-		else{
-			stability = 0f;
-		}
-		return stability;
-	}
-	
-
 	//Return inCounter
 	public int getInCounter() {
 		return inCounter;
@@ -51,20 +27,27 @@ public class Metric {
 	public int getOutCounter() {
 		return outCounter;
 	}
-	
-	//Set outCounter
 	public void setOutCounter(int outCounter) {
 		this.outCounter = outCounter;
 	}
-	
-	//Get className
 	public String getClassName() {
 		return className;
 	}
-	
-	//Set className
 	public void setClassName(String className) {
 		this.className = className;
+	}
+	private int inCounter;
+	private int outCounter;
+	private String className;
+	/**
+	 * Returns the stability of the current object class as a float value
+	 * 
+	 * @return Float value for the stability
+	 */
+	public float getStability(){
+		float stability = 0.1f;
+		stability = inCounter/(inCounter + outCounter);
+		return stability;
 	}
 
 }

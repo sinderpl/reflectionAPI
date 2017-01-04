@@ -12,11 +12,8 @@ import java.util.HashMap;
  */
 public class ReflectionRunner {
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
-		
-		//Initialise the JarReader instance
 		JarReader reader  = new JarReader();
-
-		//reader.getJar("/home/pancakemutiny/Desktop/string-service.jar");
+		reader.getJar("/home/pancakemutiny/Desktop/string-service.jar");
 		
 		
 	}
