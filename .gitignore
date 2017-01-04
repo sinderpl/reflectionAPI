@@ -1,6 +1,7 @@
 *.class
 
 .metadata
+.metadata/
 *.tmp
 *.bak
 *.swp
