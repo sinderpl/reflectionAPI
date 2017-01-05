@@ -15,8 +15,10 @@ public class ReflectionRunner {
 		
 		//Initialise the JarReader instance
 		JarReader reader  = new JarReader();
-
-		//reader.getJar("/home/pancakemutiny/Desktop/string-service.jar");
+		
+		
+		//Get the specified jar
+		reader.getJar("/home/pancakemutiny/Desktop/string-service.jar");
 		
 		
 	}

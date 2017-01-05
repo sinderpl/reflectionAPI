@@ -16,6 +16,24 @@ public class Metric {
 	private int inCounter;
 	private int outCounter;
 	private String className;
+	private boolean isInterface;
+	
+	public boolean isInterface() {
+		return isInterface;
+	}
+
+	public void setInterface(boolean isInterface) {
+		this.isInterface = isInterface;
+	}
+
+	/**
+	 * Constructor
+	 * @param name The name of the class without the package 
+	 */
+	public Metric(String name){
+		className  = name;
+	}
+	
 	/**
 	 * Returns the stability of the current object class as a float value
 	 * 
@@ -27,8 +45,8 @@ public class Metric {
 		
 		//Make sure outCounter is not zero to avoid division by 0,
 		//inCounter does not need to be checked at this point
-		if (outCounter > 0){
-			stability = (float) inCounter/(inCounter + outCounter);
+		if (outCounter >= 0){
+			stability = (float) outCounter/(inCounter + outCounter);
 		}
 		else{
 			stability = 0f;
@@ -36,6 +54,7 @@ public class Metric {
 		return stability;
 	}
 	
+	//Getters and Setters
 
 	//Return inCounter
 	public int getInCounter() {
