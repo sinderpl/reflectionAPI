@@ -62,8 +62,11 @@ public class Metric {
 	}
 	
 	//Set inCounter
-	public void setInCounter(int inCounter) {
-		this.inCounter = inCounter;
+	/**
+	 * I have modified the set in Counter to an increment method instead
+	 */
+	public void IncrementInCounter() {
+		this.inCounter++;
 	}
 	
 	//Get outCounter
@@ -71,9 +74,12 @@ public class Metric {
 		return outCounter;
 	}
 	
-	//Set outCounter
-	public void setOutCounter(int outCounter) {
-		this.outCounter = outCounter;
+	//Set outCounter 
+	/**
+	 * 	I have modified the set out Counter to an increment method instead
+	 */
+	public void incrementOutCounter() {
+		this.outCounter++;
 	}
 	
 	//Get className
