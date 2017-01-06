@@ -73,7 +73,7 @@ public class JarReader {
 		 else{
 			 System.out.println("Array empty");
 		 }
-		 **/
+		 **/	
 		 jarContents.put(name, new Metric(className));
 		 }
 		 next = in.getNextJarEntry();

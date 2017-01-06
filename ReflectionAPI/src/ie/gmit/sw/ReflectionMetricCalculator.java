@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.Arrays;
+import java.util.regex.Pattern;
 /**
  * 
  * @author G00313177
@@ -22,6 +23,9 @@ public class ReflectionMetricCalculator {
 	private ClassLoader cLoader;
 	//Set for easier access to class names
 	private Set<String> classNames;
+	//Regex needed to delete the interface/class prerequisite from 
+	//global class variables (Field type)
+	Pattern pattern = Pattern.compile("\\w+\\s");
 	
 	
 	/**
@@ -57,11 +61,14 @@ public class ReflectionMetricCalculator {
 			checkmethodFields(currentMetric, cls);
 			checkClassFields(currentMetric, cls);
 			
+			//Print the result
+			System.out.println("Stability of: "+ name + " is: "+ currentMetric.getStability() + " From values: " + currentMetric.getOutCounter()
+					+  " / " + currentMetric.getInCounter() + "+"+ currentMetric.getOutCounter());
+			System.out.println();
 		}
 	}
 	
-	
-	
+
 	/**
 	 * Checks whether the class implements any of the non standard interfaces and then increments,
 	 * both the class and it's implemented interface.
@@ -95,8 +102,6 @@ public class ReflectionMetricCalculator {
 		//Put the metric back in the map
 		metricMap.put(cls.getName(), currentMetric);
 	}
-	
-	
 	
 	/**
 	 * Checks the constructors for any implemented classes and increments the classes respectively,
@@ -206,12 +211,29 @@ public class ReflectionMetricCalculator {
 	 * 
 	 */
 	public void checkClassFields(Metric currentMetric, Class cls){
+		
 		//Get the objects implemented by a class
-		System.out.println("declared fields for " + cls.getName() + ": ");
-		Field[] classParams = cls.getDeclaredFields();
+		Field[] classParams = cls.getDeclaredFields();	
+		
+		//Iterate through the fields
 		for (Field cles : classParams){
+			
+			//Save the name to a new string
+			String cName = cles.getType().toString();
+			
+			//Use regex to get rid of the class/interface prefix
+			String fieldName = pattern.matcher(cName).replaceFirst("");
+			
+			//Check if class name is in the class set
+			if (classNames.contains(fieldName)){
+				//Increments the out counter of current class
+				currentMetric.incrementOutCounter();
+				//Increment the in counter of the class pointed to
+				incrementCalledClass(fieldName);
+			}
 		}
-		System.out.println();
+		//Put the metric back in the map
+		metricMap.put(cls.getName(), currentMetric);
 	}
 	
 	

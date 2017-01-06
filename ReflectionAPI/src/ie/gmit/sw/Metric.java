@@ -45,7 +45,7 @@ public class Metric {
 		
 		//Make sure outCounter is not zero to avoid division by 0,
 		//inCounter does not need to be checked at this point
-		if (outCounter >= 0){
+		if (outCounter > 0){
 			stability = (float) outCounter/(inCounter + outCounter);
 		}
 		else{
