@@ -18,7 +18,7 @@ public class ReflectionMetricCalculator {
 	
 	
 	//Private map for local storage of the Metrics
-	private HashMap<String, Metric> metricMap; //TODO check if this works (pass by reference)
+	private HashMap<String, Metric> jarContents; //TODO check if this works (pass by reference)
 	//Class loader for dynamic loading
 	private ClassLoader cLoader;
 	//Set for easier access to class names
@@ -36,7 +36,7 @@ public class ReflectionMetricCalculator {
 	 */
 	public ReflectionMetricCalculator(HashMap<String, Metric> metricMap, ClassLoader cLoader) throws ClassNotFoundException{
 		//Assign the variables
-		this.metricMap = metricMap;
+		this.jarContents = metricMap;
 		this.cLoader = cLoader;
 		classNames = metricMap.keySet();
 		
@@ -55,7 +55,7 @@ public class ReflectionMetricCalculator {
 			Class cls = Class.forName(name, false, cLoader);
 			
 			//Metric for putting back in the hashMap
-			Metric currentMetric = (Metric) metricMap.get(name);
+			Metric currentMetric = (Metric) jarContents.get(name);
 			checkInterfaces(currentMetric, cls);
 			checkConstructors(currentMetric, cls);
 			checkmethodFields(currentMetric, cls);
@@ -100,7 +100,7 @@ public class ReflectionMetricCalculator {
 			}
 		}
 		//Put the metric back in the map
-		metricMap.put(cls.getName(), currentMetric);
+		jarContents.put(cls.getName(), currentMetric);
 	}
 	
 	/**
@@ -140,7 +140,7 @@ public class ReflectionMetricCalculator {
 			}
 		}
 		//Put the metric back in the map
-		metricMap.put(cls.getName(), currentMetric);
+		jarContents.put(cls.getName(), currentMetric);
 	}
 	
 	/**
@@ -150,11 +150,11 @@ public class ReflectionMetricCalculator {
 	 */
 	public void incrementCalledClass(String className){
 		//Find the metric and put it in a temp metric
-		Metric tempMetric = metricMap.get(className);
+		Metric tempMetric = jarContents.get(className);
 		// Increment the counter
 		tempMetric.IncrementInCounter();
 		//Put the metric back in the map
-		metricMap.put(className, tempMetric);
+		jarContents.put(className, tempMetric);
 	}
 
 	/**
@@ -200,7 +200,7 @@ public class ReflectionMetricCalculator {
 			}
 		}
 		//Put the metric back in the map
-		metricMap.put(cls.getName(), currentMetric);
+		jarContents.put(cls.getName(), currentMetric);
 	}
 	
 	/**
@@ -233,7 +233,7 @@ public class ReflectionMetricCalculator {
 			}
 		}
 		//Put the metric back in the map
-		metricMap.put(cls.getName(), currentMetric);
+		jarContents.put(cls.getName(), currentMetric);
 	}
 	
 	

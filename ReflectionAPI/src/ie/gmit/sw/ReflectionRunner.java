@@ -1,5 +1,7 @@
 package ie.gmit.sw;
 
+import ie.gmit.sw.gui.ApplicationWindow;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
@@ -18,8 +20,9 @@ public class ReflectionRunner {
 		
 		
 		//Get the specified jar
-		reader.getJar("/home/pancakemutiny/Desktop/string-service.jar");
-		
+		HashMap<String, Metric> jarContents = reader.getJar("/home/pancakemutiny/Desktop/string-service.jar");
+		ApplicationWindow appGui = new ApplicationWindow();
+		appGui.loadClasses(jarContents);
 		
 	}
 }

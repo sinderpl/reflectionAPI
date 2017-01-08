@@ -31,8 +31,10 @@ public class JarReader {
 	 * @throws FileNotFoundException
 	 * @throws IOException
 	 * @throws ClassNotFoundException 
+	 * 
+	 * @return HashMap<String, Metric> A hash map with all the Metrics from the JAR calculated
 	 */
-	public void getJar(String jarName) throws FileNotFoundException, IOException, ClassNotFoundException{
+	public HashMap<String, Metric> getJar(String jarName) throws FileNotFoundException, IOException, ClassNotFoundException{
 		
 		//Get the jar file
 		File file = new File(jarName);
@@ -82,6 +84,7 @@ public class JarReader {
 		
 		//Send the HashMap and the Class Loader to the Calculator class for computing
 		ReflectionMetricCalculator metricCalc = new ReflectionMetricCalculator(jarContents, cLoader);
+		return jarContents;
 	}
 	/**
 	 * Returns the jarContents hash map
