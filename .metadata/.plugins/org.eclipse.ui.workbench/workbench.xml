@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="10" version="2.0">
+<workbench progressCount="14" version="2.0">
 <workbenchAdvisor/>
-<window height="876" width="768" x="832" y="24">
+<window height="848" width="768" x="830" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -17,11 +17,14 @@
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="138" y="30"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditorNoSource" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="UserSeparator" itemType="typeSeparator"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 </coolbarLayout>
 <page aggregateWorkingSetId="Aggregate for window 1481897763268" focus="true" label="Workspace - Java">
 <editors>
@@ -30,18 +33,13 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReflectionExample.java" partName="ReflectionExample.java" path="/home/pancakemutiny/Desktop/collegeProjects/reflectionAPI/ReflectionAPI/src/ReflectionExample.java" title="ReflectionExample.java" tooltip="ReflectionAPI/src/ReflectionExample.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ReflectionAPI/src/ReflectionExample.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="519" selectionTopPixel="835"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JarReader.java" partName="JarReader.java" path="/home/pancakemutiny/Desktop/collegeProjects/reflectionAPI/ReflectionAPI/src/JarReader.java" title="JarReader.java" tooltip="ReflectionAPI/src/JarReader.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ReflectionAPI/src/JarReader.java"/>
-<editorState selectionHorizontalPixel="23" selectionLength="0" selectionOffset="980" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApplicationWindow.java" partName="ApplicationWindow.java" path="/home/pancakemutiny/Desktop/collegeProjects/reflectionAPI/ReflectionAPI/src/ie/gmit/sw/gui/ApplicationWindow.java" title="ApplicationWindow.java" tooltip="ReflectionAPI/src/ie/gmit/sw/gui/ApplicationWindow.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ReflectionAPI/src/ie/gmit/sw/gui/ApplicationWindow.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5916" selectionTopPixel="2100"/>
 </editor>
 </editors>
 <views>
@@ -79,7 +77,6 @@
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings (1 item)"/>
 <category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
@@ -97,6 +94,9 @@
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
 <columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="350" org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="481" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.priorityField="35" org.eclipse.ui.ide.resourceField="105"/>
@@ -111,6 +111,12 @@
 </view>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
 </view>
 </views>
 <perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
@@ -148,43 +154,30 @@
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.ui.views.TaskList"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="topLeft">
-<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1af1347d" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1af1347d" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25940594" ratioLeft="262" ratioRight="748" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottomRight" ratio="0.6596386" ratioLeft="438" ratioRight="226" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<info folder="true" part="bottomRight" ratio="0.6596386" ratioLeft="438" ratioRight="226" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.team.ui.GenericHistoryView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottomLeft" ratio="0.5" ratioLeft="332" ratioRight="332" relationship="4" relative="topLeft">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="bottomLeft" ratio="0.5" ratioLeft="332" ratioRight="332" relationship="4" relative="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
@@ -238,9 +231,9 @@
 <new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
 <perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
 <perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
-<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
@@ -272,7 +265,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.24950884" ratioLeft="381" ratioRight="1146" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7490637" ratioLeft="600" ratioRight="201" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.70963544" ratioLeft="545" ratioRight="223" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
@@ -300,90 +293,247 @@
 </mainWindow>
 </layout>
 </perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.74983627" ratioLeft="1145" ratioRight="382" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74967575" ratioLeft="578" ratioRight="193" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
+<page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.449827" ratioLeft="260" ratioRight="318" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.74983627" ratioLeft="1145" ratioRight="382" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.49967256" ratioLeft="763" ratioRight="764" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
 </perspectives>
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ReflectionExample.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/JarReader.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/ReflectionMetricCalculator.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditorNoSource" org.eclipse.jdt.ui.ClassFileIdentifier="=ReflectionAPI/\/usr\/lib\/jvm\/java-8-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.util(Set.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/gui/Runner.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/JarReader.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/gui/AppWindow.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/gui/ApplicationWindow.java"/>
 </editors>
-<item historyLabel="ReflectionExample.java" index="0">
-<position info="not_deleted" x="519" y="0"/>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="1551" y="33"/>
 </item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="282" y="0"/>
-</item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="1151" y="0"/>
-</item>
-<item historyLabel="JarReader.java" index="1">
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
 <position/>
 </item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="919" y="0"/>
-</item>
-<item historyLabel="JarReader.java" index="1">
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
 <position/>
 </item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="883" y="0"/>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="1551" y="33"/>
 </item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="1151" y="0"/>
-</item>
-<item historyLabel="ReflectionExample.java" index="0">
-<position info="not_deleted" x="519" y="0"/>
-</item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="1151" y="0"/>
-</item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="692" y="0"/>
-</item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="613" y="0"/>
-</item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="358" y="0"/>
-</item>
-<item historyLabel="JarReader.java" index="1">
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
 <position/>
 </item>
-<item historyLabel="JarReader.java" index="1">
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="1344" y="21"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="1551" y="33"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
 <position/>
 </item>
-<item historyLabel="JarReader.java" index="1">
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
 <position/>
 </item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="774" y="0"/>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position/>
 </item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="282" y="0"/>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position/>
 </item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="329" y="5"/>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position/>
 </item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="475" y="0"/>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position/>
 </item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="334" y="1"/>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position/>
 </item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="467" y="0"/>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position/>
 </item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="467" y="0"/>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position/>
 </item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="319" y="9"/>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="3426" y="0"/>
 </item>
-<item historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="369" y="0"/>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="3475" y="0"/>
 </item>
-<item active="true" historyLabel="JarReader.java" index="1">
-<position info="not_deleted" x="371" y="0"/>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="1881" y="0"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="1923" y="0"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="1965" y="0"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="2032" y="0"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="2168" y="0"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="2032" y="0"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="2252" y="0"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position/>
+</item>
+<item historyLabel="Set.class" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="1581" y="0"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="1647" y="0"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="3310" y="71"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="1551" y="33"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="1344" y="21"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="3025" y="8"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="2818" y="0"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="2972" y="5"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="2965" y="0"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="3025" y="8"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="1551" y="0"/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position/>
+</item>
+<item historyLabel="ReflectionMetricCalculator.java" index="0">
+<position info="not_deleted" x="7429" y="0"/>
+</item>
+<item historyLabel="Runner.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="JarReader.java" index="3">
+<position info="not_deleted" x="2410" y="95"/>
+</item>
+<item historyLabel="Runner.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AppWindow.java" index="4">
+<position info="not_deleted" x="439" y="0"/>
+</item>
+<item historyLabel="Runner.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AppWindow.java" index="4">
+<position info="not_deleted" x="439" y="0"/>
+</item>
+<item historyLabel="ApplicationWindow.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ApplicationWindow.java" index="5">
+<position/>
+</item>
+<item historyLabel="ApplicationWindow.java" index="5">
+<position info="not_deleted" x="7059" y="0"/>
+</item>
+<item active="true" historyLabel="ApplicationWindow.java" index="5">
+<position info="not_deleted" x="7065" y="225"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -405,6 +555,39 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApplicationWindow.java" tooltip="ReflectionAPI/src/ie/gmit/sw/gui/ApplicationWindow.java">
+<persistable path="/ReflectionAPI/src/ie/gmit/sw/gui/ApplicationWindow.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditorNoSource" name="Set.class" tooltip="java.util.Set">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ReflectionAPI/\/usr\/lib\/jvm\/java-8-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.util(Set.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReflectionMetricCalculator.java" tooltip="ReflectionAPI/src/ie/gmit/sw/ReflectionMetricCalculator.java">
+<persistable path="/ReflectionAPI/src/ie/gmit/sw/ReflectionMetricCalculator.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="DefaultTableModel.class" tooltip="javax.swing.table.DefaultTableModel">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ReflectionAPI/\/usr\/lib\/jvm\/java-8-openjdk-amd64\/jre\/lib\/rt.jar&lt;javax.swing.table(DefaultTableModel.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Metric.java" tooltip="ReflectionAPI/src/ie/gmit/sw/Metric.java">
+<persistable path="/ReflectionAPI/src/ie/gmit/sw/Metric.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReflectionRunner.java" tooltip="ReflectionAPI/src/ie/gmit/sw/ReflectionRunner.java">
+<persistable path="/ReflectionAPI/src/ie/gmit/sw/ReflectionRunner.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JarReader.java" tooltip="ReflectionAPI/src/ie/gmit/sw/JarReader.java">
+<persistable path="/ReflectionAPI/src/ie/gmit/sw/JarReader.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AppSummary.java" tooltip="ReflectionAPI/src/ie/gmit/sw/gui/AppSummary.java">
+<persistable path="/ReflectionAPI/src/ie/gmit/sw/gui/AppSummary.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AppWindow.java" tooltip="ReflectionAPI/src/ie/gmit/sw/gui/AppWindow.java">
+<persistable path="/ReflectionAPI/src/ie/gmit/sw/gui/AppWindow.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CustomControl.java" tooltip="ReflectionAPI/src/ie/gmit/sw/gui/CustomControl.java">
+<persistable path="/ReflectionAPI/src/ie/gmit/sw/gui/CustomControl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Runner.java" tooltip="ReflectionAPI/src/ie/gmit/sw/gui/Runner.java">
+<persistable path="/ReflectionAPI/src/ie/gmit/sw/gui/Runner.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JarReader.java" tooltip="ReflectionAPI/src/JarReader.java">
 <persistable path="/ReflectionAPI/src/JarReader.java"/>
 </file>

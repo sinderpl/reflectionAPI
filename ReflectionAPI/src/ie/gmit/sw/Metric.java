@@ -41,7 +41,7 @@ public class Metric {
 	 */
 	public float getStability(){
 		//Local return variable to represent the stability as a float value
-		float stability = 1f;
+		float stability ;
 		
 		//Make sure outCounter is not zero to avoid division by 0,
 		//inCounter does not need to be checked at this point

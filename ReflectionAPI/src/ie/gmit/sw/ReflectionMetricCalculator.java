@@ -23,6 +23,8 @@ public class ReflectionMetricCalculator {
 	private ClassLoader cLoader;
 	//Set for easier access to class names
 	private Set<String> classNames;
+	//Set to check if class has been counted already
+	private ArrayList<String> classAvailable;
 	//Regex needed to delete the interface/class prerequisite from 
 	//global class variables (Field type)
 	Pattern pattern = Pattern.compile("\\w+\\s");
@@ -50,7 +52,8 @@ public class ReflectionMetricCalculator {
 	 */
 	private void calculateDegrees() throws ClassNotFoundException{
 		for (String name : classNames){
-			
+			//Re assign the array again
+			classAvailable = new ArrayList<String>();
 			//Dynamically loading the class
 			Class cls = Class.forName(name, false, cLoader);
 			
@@ -91,12 +94,15 @@ public class ReflectionMetricCalculator {
 		//Query through the interfaces
 		for (Class clsInterface : implementedInterfaces){
 			//If statment to check whether the interface is implemented
-			if (classNames.contains(clsInterface.getName())){
+			if (classAvailable.contains(clsInterface.getName())){
 				//Increment the out degree counter
 				currentMetric.incrementOutCounter();
 				
 				//Increment the called class
 				incrementCalledClass(clsInterface.getName());
+				
+				//Delete the class from the available array so it wont be counted again
+				//classAvailable.add(clsInterface.getName());
 			}
 		}
 		//Put the metric back in the map
@@ -136,6 +142,7 @@ public class ReflectionMetricCalculator {
 					currentMetric.incrementOutCounter();
 					//Increment the class that is referenced to this
 					incrementCalledClass(classParam.getName());
+					//Delete the class from the available array so it wont be counted again
 				}
 			}
 		}
@@ -143,20 +150,6 @@ public class ReflectionMetricCalculator {
 		jarContents.put(cls.getName(), currentMetric);
 	}
 	
-	/**
-	 * Small method to find and increment the in Counter of classes that are called,
-	 * this is created to avoid the repetition of code
-	 * @param className Name of the class that is to be implemented  (Key in the Hash Map)
-	 */
-	public void incrementCalledClass(String className){
-		//Find the metric and put it in a temp metric
-		Metric tempMetric = jarContents.get(className);
-		// Increment the counter
-		tempMetric.IncrementInCounter();
-		//Put the metric back in the map
-		jarContents.put(className, tempMetric);
-	}
-
 	/**
 	 * Get the method fields and check for any implementations 
 	 * (in and return parameters), of classes we want
@@ -184,6 +177,8 @@ public class ReflectionMetricCalculator {
 					currentMetric.incrementOutCounter();
 					//Increment called class
 					incrementCalledClass(field.getName());
+					
+					//Delete the class from the available array so it wont be counted again
 				}
 			}
 			
@@ -197,6 +192,7 @@ public class ReflectionMetricCalculator {
 				currentMetric.incrementOutCounter();
 				//Increment called class
 				incrementCalledClass(c.getName());
+				//Delete the class from the available array so it wont be counted again
 			}
 		}
 		//Put the metric back in the map
@@ -230,12 +226,27 @@ public class ReflectionMetricCalculator {
 				currentMetric.incrementOutCounter();
 				//Increment the in counter of the class pointed to
 				incrementCalledClass(fieldName);
+				//Delete the class from the available array so it wont be counted again
 			}
 		}
 		//Put the metric back in the map
 		jarContents.put(cls.getName(), currentMetric);
 	}
 	
+	/**
+	 * Small method to find and increment the in Counter of classes that are called,
+	 * this is created to avoid the repetition of code
+	 * @param className Name of the class that is to be implemented  (Key in the Hash Map)
+	 */
+	public void incrementCalledClass(String className){
+		//Find the metric and put it in a temp metric
+		Metric tempMetric = jarContents.get(className);
+		// Increment the counter
+		tempMetric.IncrementInCounter();
+		//Put the metric back in the map
+		jarContents.put(className, tempMetric);
+	}
+
 	
 	
 	
