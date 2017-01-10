@@ -1,7 +1,5 @@
-package ie.gmit.sw.gui;
+package ie.gmit.sw;
 
-import ie.gmit.sw.JarReader;
-import ie.gmit.sw.Metric;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -38,19 +36,15 @@ public class ApplicationWindow {
 	JLabel statusLabel;
 	//Check whether a JAR file has been chosen
 	boolean isJar = false;
-	//Initialise the JarReader instance
-	JarReader reader  = new JarReader();
-	//Scroller
-	private JScrollPane tableScroller = null;
-	//Type summary model
-	private DefaultTableModel tm = null;
-	//JTable
-	private JTable table = null;
+	//Controller reference
+	Controller c ;
 	
 	/**
 	 * Basic constructor for initialising the window
 	 */
-	public ApplicationWindow(){
+	public ApplicationWindow(final Controller c){
+		//Assign the controller for reference
+		this.c = c;
 		//Some of the code has been adapted from the moodle GUI example
 		//Create a window for the application
 		mainFrame = new JFrame();
@@ -109,10 +103,10 @@ public class ApplicationWindow {
                 	
                 	//Verify whether a JAR has been selected and feed back to user
                 	if(isJar){
-                		statusLabel.setText("Status: You have selected a JAR file.");
-                		//Get the specified jar
+                		statusLabel.setText("Status: You have selected a JAR file, loading now.");
+                		//Notify the controller and add the output to the Frame
                 		try {
-							HashMap<String, Metric> jarContents = reader.getJar("/home/pancakemutiny/Desktop/string-service.jar");
+							c.loadClasses(name);
 						} catch (FileNotFoundException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -145,75 +139,16 @@ public class ApplicationWindow {
 		
 		//Set the frame to be visible
 		mainFrame.setVisible(true);
-		
-		HashMap<String, Metric> jarContents;
-		try {
-			jarContents = reader.getJar("/home/pancakemutiny/Desktop/string-service.jar");
-			loadClasses(jarContents);
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
 	}
 	
-	/**
+	
+	/*
+	 * Getter for the application MainFrame
 	 * 
-	 * Loads the JAR classes into the JTable
-	 * 
-	 * @param jarContents the hashMap with all the Metric data
 	 */
-	public void loadClasses(HashMap<String, Metric> jarContents){
-		tm = new DefaultTableModel();
-		//Add column names
-		tm.addColumn("Class Name: ");
-		tm.addColumn("Is interface: ");
-		tm.addColumn("Stability: ");
-		
-	
-		table = new JTable(tm);
-		//Set column sizes
-		table.getColumnModel().getColumn(0).setPreferredWidth(300);
-		table.getColumnModel().getColumn(1).setPreferredWidth(80);
-		table.getColumnModel().getColumn(2).setPreferredWidth(80);
-		
-		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-		table.setSelectionBackground(Color.YELLOW);
-
-		table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		
-			//Get the data from the hashMap and put it into string format
-		      Set<String> keys = jarContents.keySet();
-		      for (String key : keys){
-		    	  //Temporary metric object for extracting data
-		    	  Metric tempMetric = jarContents.get(key);
-		    	  //String values
-		    	  String className = tempMetric.getClassName();
-		    	  String isInterface = Boolean.toString(tempMetric.isInterface());
-		    	  String stability = Float.toString(tempMetric.getStability());
-		    	  
-		    	  //Create an array out of the strings
-		    	  Object[] row = {className, isInterface, stability};
-		    	  //Get the model of the table
-		    	  DefaultTableModel model = (DefaultTableModel) table.getModel();
-		    	  //Add the row to the table
-		    	  model.addRow(row);
-		     // }
-		    
-		}
-
-		tableScroller = new JScrollPane(table);
-		tableScroller.setPreferredSize(new java.awt.Dimension(485, 235));
-		tableScroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
-
-		mainFrame.add(tableScroller, FlowLayout.LEFT);
+	public JFrame getMainFrame(){
+		return mainFrame;
 	}
-	
 	
 	//End of code
 }
