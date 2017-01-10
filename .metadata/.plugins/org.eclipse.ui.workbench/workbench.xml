@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="12" version="2.0">
+<workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
-<window height="875" maximized="true" width="768" x="426" y="204">
+<window height="848" width="768" x="832" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -14,7 +14,7 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="138" y="30"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -33,23 +33,13 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApplicationWindow.java" partName="ApplicationWindow.java" path="/home/pancakemutiny/Desktop/collegeProjects/reflectionAPI/ReflectionAPI/src/ie/gmit/sw/gui/ApplicationWindow.java" title="ApplicationWindow.java" tooltip="ReflectionAPI/src/ie/gmit/sw/gui/ApplicationWindow.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ReflectionAPI/src/ie/gmit/sw/gui/ApplicationWindow.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6311" selectionTopPixel="2255"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AppSummary.java" partName="AppSummary.java" path="/home/pancakemutiny/Desktop/collegeProjects/reflectionAPI/ReflectionAPI/src/ie/gmit/sw/gui/AppSummary.java" title="AppSummary.java" tooltip="ReflectionAPI/src/ie/gmit/sw/gui/AppSummary.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ReflectionAPI/src/ie/gmit/sw/gui/AppSummary.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="21" selectionOffset="908" selectionTopPixel="418"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Metric.java" partName="Metric.java" path="/home/pancakemutiny/Desktop/collegeProjects/reflectionAPI/ReflectionAPI/src/ie/gmit/sw/Metric.java" title="Metric.java" tooltip="ReflectionAPI/src/ie/gmit/sw/Metric.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ReflectionAPI/src/ie/gmit/sw/Metric.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="832" selectionTopPixel="485"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApplicationWindow.java" partName="ApplicationWindow.java" path="/home/pancakemutiny/Desktop/collegeProjects/reflectionAPI/ReflectionAPI/src/ie/gmit/sw/ApplicationWindow.java" title="ApplicationWindow.java" tooltip="ReflectionAPI/src/ie/gmit/sw/ApplicationWindow.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ReflectionAPI/src/ie/gmit/sw/ApplicationWindow.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5125" selectionTopPixel="62"/>
 </editor>
 </editors>
 <views>
@@ -86,8 +76,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Warnings (32 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -129,7 +118,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -226,6 +215,7 @@
 <show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
 <show_view_action id="org.eclipse.pde.runtime.LogView"/>
 <show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_in_time id="org.eclipse.ui.navigator.ProjectExplorer" time="1484069866781"/>
 <new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
 <new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
 <new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
@@ -249,18 +239,20 @@
 <view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
 <info folder="true" part="left">
-<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
@@ -385,164 +377,168 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/ReflectionMetricCalculator.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/gui/Runner.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/JarReader.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/gui/AppWindow.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/gui/ApplicationWindow.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/Metric.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/gui/AppWindow.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/gui/AppSummary.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/gui/AppSummary.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/Metric.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/gui/CustomControl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/gui/Runner.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/ApplicationWindow.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ReflectionAPI/src/ie/gmit/sw/Controller.java"/>
 </editors>
-<item historyLabel="ReflectionMetricCalculator.java" index="0">
-<position info="not_deleted" x="2818" y="0"/>
-</item>
-<item historyLabel="ReflectionMetricCalculator.java" index="0">
-<position info="not_deleted" x="2972" y="5"/>
-</item>
-<item historyLabel="ReflectionMetricCalculator.java" index="0">
-<position info="not_deleted" x="2965" y="0"/>
-</item>
-<item historyLabel="ReflectionMetricCalculator.java" index="0">
-<position info="not_deleted" x="3025" y="8"/>
-</item>
-<item historyLabel="ReflectionMetricCalculator.java" index="0">
-<position info="not_deleted" x="1551" y="0"/>
-</item>
-<item historyLabel="ReflectionMetricCalculator.java" index="0">
-<position/>
-</item>
-<item historyLabel="ReflectionMetricCalculator.java" index="0">
-<position info="not_deleted" x="7429" y="0"/>
-</item>
-<item historyLabel="Runner.java" index="1">
+<item historyLabel="Runner.java" index="0">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="JarReader.java" index="2">
-<position info="not_deleted" x="2410" y="95"/>
-</item>
-<item historyLabel="Runner.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="AppWindow.java" index="3">
+<item historyLabel="AppWindow.java" index="1">
 <position info="not_deleted" x="439" y="0"/>
 </item>
-<item historyLabel="Runner.java" index="1">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="AppWindow.java" index="3">
-<position info="not_deleted" x="439" y="0"/>
-</item>
-<item historyLabel="ApplicationWindow.java" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="7059" y="0"/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="7065" y="225"/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="5108" y="0"/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="7079" y="0"/>
 </item>
-<item historyLabel="Metric.java" index="5">
+<item historyLabel="Metric.java" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="7610" y="0"/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="7052" y="0"/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="5306" y="28"/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="6898" y="68"/>
 </item>
-<item historyLabel="AppWindow.java" index="6">
+<item historyLabel="AppWindow.java" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="AppSummary.java" index="7">
+<item historyLabel="AppSummary.java" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="6600" y="0"/>
 </item>
-<item historyLabel="AppSummary.java" index="7">
+<item historyLabel="AppSummary.java" index="5">
 <position info="not_deleted" x="908" y="21"/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="6600" y="0"/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="1169" y="0"/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="7012" y="72"/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="6153" y="0"/>
 </item>
-<item historyLabel="Metric.java" index="5">
+<item historyLabel="Metric.java" index="3">
 <position/>
 </item>
-<item historyLabel="AppSummary.java" index="7">
+<item historyLabel="AppSummary.java" index="5">
 <position info="not_deleted" x="908" y="21"/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="6153" y="0"/>
 </item>
-<item historyLabel="Metric.java" index="5">
+<item historyLabel="Metric.java" index="3">
 <position/>
 </item>
-<item historyLabel="Metric.java" index="5">
+<item historyLabel="Metric.java" index="3">
 <position info="not_deleted" x="832" y="0"/>
 </item>
-<item historyLabel="Metric.java" index="5">
+<item historyLabel="Metric.java" index="3">
 <position info="not_deleted" x="857" y="0"/>
 </item>
-<item historyLabel="ApplicationWindow.java" index="4">
+<item historyLabel="ApplicationWindow.java" index="2">
 <position info="not_deleted" x="6153" y="0"/>
 </item>
-<item historyLabel="Metric.java" index="5">
+<item historyLabel="Metric.java" index="3">
 <position info="not_deleted" x="832" y="0"/>
 </item>
-<item active="true" historyLabel="ApplicationWindow.java" index="4">
-<position info="not_deleted" x="6153" y="0"/>
+<item historyLabel="ApplicationWindow.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AppSummary.java" index="6">
+<position info="not_deleted" x="908" y="21"/>
+</item>
+<item historyLabel="Metric.java" index="7">
+<position info="not_deleted" x="832" y="0"/>
+</item>
+<item historyLabel="AppSummary.java" index="6">
+<position info="not_deleted" x="867" y="0"/>
+</item>
+<item historyLabel="CustomControl.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Runner.java" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="CustomControl.java" index="8">
+<position info="not_deleted" x="626" y="0"/>
+</item>
+<item historyLabel="Runner.java" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AppSummary.java" index="6">
+<position info="not_deleted" x="867" y="0"/>
+</item>
+<item historyLabel="ApplicationWindow.java" index="10">
+<position info="not_deleted" x="5125" y="0"/>
+</item>
+<item historyLabel="Controller.java" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="ApplicationWindow.java" index="10">
+<position info="not_deleted" x="5125" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -550,9 +546,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -564,6 +557,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Controller.java" tooltip="ReflectionAPI/src/ie/gmit/sw/Controller.java">
+<persistable path="/ReflectionAPI/src/ie/gmit/sw/Controller.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApplicationWindow.java" tooltip="ReflectionAPI/src/ie/gmit/sw/ApplicationWindow.java">
+<persistable path="/ReflectionAPI/src/ie/gmit/sw/ApplicationWindow.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Metric.java" tooltip="ReflectionAPI/src/ie/gmit/sw/Metric.java">
 <persistable path="/ReflectionAPI/src/ie/gmit/sw/Metric.java"/>
 </file>
@@ -590,12 +589,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JarReader.java" tooltip="ReflectionAPI/src/ie/gmit/sw/JarReader.java">
 <persistable path="/ReflectionAPI/src/ie/gmit/sw/JarReader.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CustomControl.java" tooltip="ReflectionAPI/src/ie/gmit/sw/gui/CustomControl.java">
-<persistable path="/ReflectionAPI/src/ie/gmit/sw/gui/CustomControl.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Runner.java" tooltip="ReflectionAPI/src/ie/gmit/sw/gui/Runner.java">
-<persistable path="/ReflectionAPI/src/ie/gmit/sw/gui/Runner.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JarReader.java" tooltip="ReflectionAPI/src/JarReader.java">
 <persistable path="/ReflectionAPI/src/JarReader.java"/>

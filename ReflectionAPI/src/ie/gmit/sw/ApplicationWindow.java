@@ -40,7 +40,9 @@ public class ApplicationWindow {
 	Controller c ;
 	
 	/**
-	 * Basic constructor for initialising the window
+	 * Initialises the JFrame and JPanels, sets up the windows and sizes
+	 * 
+	 * @param c Controller object for reference 
 	 */
 	public ApplicationWindow(final Controller c){
 		//Assign the controller for reference
@@ -142,9 +144,10 @@ public class ApplicationWindow {
 	}
 	
 	
-	/*
+	/**
 	 * Getter for the application MainFrame
 	 * 
+	 * @return Jframe main frame object
 	 */
 	public JFrame getMainFrame(){
 		return mainFrame;
