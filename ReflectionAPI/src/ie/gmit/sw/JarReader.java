@@ -3,7 +3,7 @@ package ie.gmit.sw;
  * 
  * @author G00313177
  *
- * A class to read in the Jar
+ * Reads in the JAR and transfers the data to a ReflectionMetricCalculator for calculations
  */
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.jar.JarInputStream;
 import java.util.jar.JarEntry;
-
 
 public class JarReader {
 	
@@ -31,6 +30,8 @@ public class JarReader {
 	 * @throws FileNotFoundException
 	 * @throws IOException
 	 * @throws ClassNotFoundException 
+	 * 
+	 * @param jarName The full system path to the class that is to be loaded.
 	 * 
 	 * @return HashMap<String, Metric> A hash map with all the Metrics from the JAR calculated
 	 */
@@ -59,23 +60,6 @@ public class JarReader {
 		 //delete the package from the name
 		 String className = name.replaceAll(".*\\.", "");
 		 if (!name.contains("$")) name.substring(0, name.length() - ".class".length());
-		 //System.out.println(name);
-		 
-		 //System.out.println(className);
-		
-		 
-		 /**
-		 // Class try
-		 Class[] clsArray = cls.getClasses();
-		 if(clsArray.length > 0){
-		 for (int x = 0 ; x <= clsArray.length; x ++){
-			 System.out.println("Class is : " + clsArray[x].getName());
-		 }
-		 }
-		 else{
-			 System.out.println("Array empty");
-		 }
-		 **/	
 		 jarContents.put(name, new Metric(className));
 		 }
 		 next = in.getNextJarEntry();

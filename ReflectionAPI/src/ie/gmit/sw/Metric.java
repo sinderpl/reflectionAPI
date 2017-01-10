@@ -47,6 +47,7 @@ public class Metric {
 		//inCounter does not need to be checked at this point
 		if (outCounter > 0){
 			stability = (float) ((float) outCounter/((float)inCounter + (float)outCounter));
+			return (float) (Math.round(stability * 100d)/100d);
 		}
 		else{
 			stability = 0f;

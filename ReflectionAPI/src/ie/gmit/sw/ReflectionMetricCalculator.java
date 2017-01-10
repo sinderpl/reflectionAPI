@@ -25,6 +25,7 @@ public class ReflectionMetricCalculator {
 	private Set<String> classNames;
 	//Set to check if class has been counted already
 	private ArrayList<String> classAvailable;
+	//
 	//Regex needed to delete the interface/class prerequisite from 
 	//global class variables (Field type)
 	Pattern pattern = Pattern.compile("\\w+\\s");
@@ -94,16 +95,16 @@ public class ReflectionMetricCalculator {
 		//Query through the interfaces
 		for (Class clsInterface : implementedInterfaces){
 			//If statment to check whether the interface is implemented
-			if (classAvailable.contains(clsInterface.getName())){
+			if (classNames.contains(clsInterface.getName()) && classAvailable.contains(clsInterface.getName()) == false){
 				//Increment the out degree counter
 				currentMetric.incrementOutCounter();
 				
 				//Increment the called class
 				incrementCalledClass(clsInterface.getName());
 				
-				//Delete the class from the available array so it wont be counted again
-				//classAvailable.add(clsInterface.getName());
+				classAvailable.add(clsInterface.getName());
 			}
+			
 		}
 		//Put the metric back in the map
 		jarContents.put(cls.getName(), currentMetric);
@@ -136,13 +137,15 @@ public class ReflectionMetricCalculator {
 				if (classParam.isInterface() == false && classNames.contains(classParam.getName())){
 				**/
 				//Checks the class name against our custom parameter list
-				if (classNames.contains(classParam.getName())){
+				if (classNames.contains(classParam.getName()) && classAvailable.contains(classParam.getName()) == false){
 					//
 					//Increment current class
 					currentMetric.incrementOutCounter();
 					//Increment the class that is referenced to this
 					incrementCalledClass(classParam.getName());
-					//Delete the class from the available array so it wont be counted again
+					//Add the name to the available list
+					classAvailable.add(classParam.getName());
+					
 				}
 			}
 		}
@@ -171,14 +174,15 @@ public class ReflectionMetricCalculator {
 			for (Class field : fields){
 				
 				//Check if it is a custom class
-				if (classNames.contains(field.getName())){
+				if (classNames.contains(field.getName())&& classAvailable.contains(field.getName()) == false){
 					
 					//Increment the current class
 					currentMetric.incrementOutCounter();
 					//Increment called class
 					incrementCalledClass(field.getName());
 					
-					//Delete the class from the available array so it wont be counted again
+					//Add the class to the available array
+					classAvailable.add(field.getName());
 				}
 			}
 			
@@ -187,12 +191,13 @@ public class ReflectionMetricCalculator {
 			Class c = mth.getReturnType();
 
 			//Check if it is a custom class
-			if (classNames.contains(c.getName())){
+			if (classNames.contains(c.getName()) && classAvailable.contains(c.getName()) == false){
 				//Increment the current class
 				currentMetric.incrementOutCounter();
 				//Increment called class
 				incrementCalledClass(c.getName());
-				//Delete the class from the available array so it wont be counted again
+				//Add the name to the available array
+				classAvailable.add(c.getName());
 			}
 		}
 		//Put the metric back in the map
@@ -209,7 +214,7 @@ public class ReflectionMetricCalculator {
 	public void checkClassFields(Metric currentMetric, Class cls){
 		
 		//Get the objects implemented by a class
-		Field[] classParams = cls.getDeclaredFields();	
+		Field[] classParams = cls.getDeclaredFields();
 		
 		//Iterate through the fields
 		for (Field cles : classParams){
@@ -221,12 +226,13 @@ public class ReflectionMetricCalculator {
 			String fieldName = pattern.matcher(cName).replaceFirst("");
 			
 			//Check if class name is in the class set
-			if (classNames.contains(fieldName)){
+			if (classNames.contains(fieldName) && classAvailable.contains(fieldName) == false){
 				//Increments the out counter of current class
 				currentMetric.incrementOutCounter();
 				//Increment the in counter of the class pointed to
 				incrementCalledClass(fieldName);
-				//Delete the class from the available array so it wont be counted again
+				//Add to the available array
+				classAvailable.add(fieldName);
 			}
 		}
 		//Put the metric back in the map
@@ -247,13 +253,6 @@ public class ReflectionMetricCalculator {
 		jarContents.put(className, tempMetric);
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
+
 //end of code
 }
